@@ -28,7 +28,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/test/env', (req, res) => {
-  console.log(process.env)
   res.send(process.env.test)
 })
 
