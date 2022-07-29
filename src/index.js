@@ -43,7 +43,7 @@ app.get('/pr/:pr', function(req, res){
         res.send('NO')
     } else {
         db.set(pr, 'True');
-        fetch('https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/pr-created.md')
+        fetch('https://raw.githubusercontent.com/is-a-dev/team-docs/main/pr-created.md')
         .then(response => response.text())
         .then(data => {
             // Do something with your data
@@ -73,7 +73,7 @@ app.get('/pr/merged/:pr', function(req, res){
         res.send('NO')
     } else {
         finisheddb.set(pr, 'True');
-        fetch('https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/pr-merged.md')
+        fetch('https://raw.githubusercontent.com/is-a-dev/team-docs/main/pr-merged.md')
         .then(response => response.text())
         .then(data => {
             // Do something with your data
